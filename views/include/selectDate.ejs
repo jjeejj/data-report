@@ -1,0 +1,33 @@
+<style>
+    .float-e-margins .btn {
+        margin-bottom: 0px;
+    }
+</style>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>日期选择</h5>
+            </div>
+            <div class="ibox-content">
+                <form role="form" class="form-inline" action="/report/<%= type%>" method="post" id="search-form">
+                    <div class="form-group">
+                        <label for="startDate" class="sr-only">开始日期</label>
+                        <div class="col-sm-10">
+                            <input class="form-control layer-date" id="startDate" placeholder="开始日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+                            <!-- <label class="laydate-icon"></label> -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate" class="sr-only">结束日期</label>
+                        <div class="col-sm-10">
+                            <input class="form-control layer-date" id="endDate" placeholder="结束日期" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})">
+                            <!-- <label class="laydate-icon"></label> -->
+                        </div>
+                    </div>
+                   <button class="btn btn-primary" type="button" id="searchBtn">查询</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

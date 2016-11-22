@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <%- include('./include/head.ejs')%>
+    <%- include('./include/script.ejs')%>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close"><i class="fa fa-times-circle"></i>
+            </div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a href="/">
+                                <span class="clear">
+                                    <span class="block m-t-xs" style="font-size:20px;">
+                                        <i class="fa fa-area-chart"></i>
+                                        <strong class="font-bold">Report</strong>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="logo-element">Report
+                        </div>
+                    </li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">分类</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">统计图表</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level in">
+                            <li>
+                                <a class="J_menuItem" href="/bar">柱状图</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/line">折线图</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/pie">饼状图</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/group">图表组合</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row J_mainContent" id="content-main">
+                <% if(pageurl === 'index_v1'){ %>
+                    <%- include('./index_v1.ejs') %>
+                <% } else { %>
+                    <%- include('./report.ejs',{type:pageurl}) %>
+                <% } %>
+            </div>
+        </div>
+        <!--右侧部分结束-->
+    </div>
+</body>
+
+</html>

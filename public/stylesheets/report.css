@@ -1,0 +1,10 @@
+/*首页 report 字体 虚化居中显示 */
+
+.index-report{
+    font-size: 50px;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    text-align: center;
+}
