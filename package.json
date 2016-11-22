@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "supervisor ./bin/www",
+    "start": "pm2 start ./bin/www",
+    "stop": "pm2 stop ./bin/www",
     "json": "json-server --watch ./db.json -p 3001"
   },
   "dependencies": {
@@ -21,5 +22,5 @@
   "devDependencies": {
     "json-server": "^0.9.0"
   },
-  "license": "ISC",
+  "license": "ISC"
 }

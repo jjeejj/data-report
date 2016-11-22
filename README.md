@@ -7,3 +7,6 @@
 运行 npm run start 运动项目
 
 浏览器中访问 http://loaclhost:3000 看到效果
+
+
+可以利用 pm2管理进程
