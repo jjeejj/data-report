@@ -10,3 +10,7 @@
 
 
 可以利用 pm2管理进程
+
+需要全局安装 pm2
+
+npm install -g pm2
